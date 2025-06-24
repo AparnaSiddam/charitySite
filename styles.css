@@ -1,0 +1,708 @@
+*, 
+*::after, 
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primray-color: #000;
+    --secondary-color: #fff;
+    --hover-color: gold;
+    --btn-color: rgb(6, 105, 58);
+}
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+    scroll-behavior: smooth;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    
+}
+
+/* nav */
+.navbar{
+ background-color:var(--primray-color);
+ color: var(--secondary-color);
+ padding: 1rem;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ z-index: 1;
+ font-size: 1.2rem;
+ }
+
+.navbar a{
+    color: #fff;
+    border: 0;
+    outline: 0;
+}
+.navbar a:active, .navbar a:focus{
+    border: 0;
+    outline: 0;
+}
+.navbar a:hover{
+ color: var(--hover-color);
+}
+.navbar.nav-scroll{
+    background-color: #263b5c;
+    backdrop-filter: blur(10px);
+}
+
+.nav-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-menu-list{
+    display: flex;
+    gap: 2rem;
+}
+
+
+.mobile-menu-items{
+background-color: red;
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+text-align: center;
+padding: 3rem 2rem;
+background-color: rgba(0, 0, 0, 0.8);
+transform: translateX(100%);
+transition: transform 0.3s ease;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.mobile-menu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mobile-menu-items.active{
+    transform: translateX(0);
+}
+.mobile-menu{
+    display: none;
+}
+
+.logo{
+    font-size: 2rem;
+}
+
+.logo i{
+    color: var(--btn-color);
+}
+
+.logo .highlight{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Hero */
+
+.hero{
+    background: url(images/header/showcase.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+}
+.hero .hero-content h1{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.hero .hero-content p{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero .hero-content a{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -95%);
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.hero .hero-content h1{
+    font-size: 3.5rem;
+}
+.hero .hero-content p{
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+}
+
+.hero .hero-content a{
+    display: inline-block;
+    color: #fff;
+    background-color: var(--btn-color);
+    padding: 0.5rem 1rem;
+    border: solid 1px var(--btn-color);
+}
+
+.hero .hero-content a:hover{
+    opacity: 0.7;
+}
+
+/* Programs */
+
+#programs .container{
+  padding: 3rem;
+}
+
+#programs .programsMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#programs .programsMain .box{
+    flex: 1;
+    background-color: #eee;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#programs .text{
+    padding: 2rem;
+}
+
+#programs h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.5s;
+}
+#programs p{
+    color: gray;
+    margin-bottom: 1rem;
+}
+
+#programs .innerBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: solid 1px #ddd;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.innerBox h4{
+    color: rgb(12, 136, 115);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.innerBox button{
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    padding: 1rem 2rem;
+    background-color: rgb(239, 75, 15);
+    text-align: center;
+    color: #fff;
+    border: solid 2px rgb(239, 75, 15);
+    transition: all 0.5s;
+}
+
+.box:hover h3{
+    color: rgb(239, 75, 15);
+}
+.box:hover button{
+    background-color: #fff;
+    text-align: center;
+    color: rgb(239, 75, 15);
+    border: solid 2px rgb(239, 75, 15);
+}
+
+
+/* about */
+#about{
+    text-align: center;
+    background-color: skyblue;
+}
+
+#about .container{
+  padding: 3rem;
+}
+
+#about .aboutUs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+#about h3{
+    font-size: 1.5rem;
+}
+
+#about p{
+    margin: 2rem 0;
+}
+
+#about #discover{
+    cursor: pointer;
+    background-color: rgb(239, 75, 15);
+    color: #fff;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border: solid 2px rgb(239, 75, 15);
+    transition: all 0.5s;
+}
+
+#about #discover:hover{
+    background-color: #fff;
+    color: rgb(239, 75, 15);
+}
+
+#about #join{
+    position: relative;
+    border: solid 2px rgb(239, 75, 15);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    color: rgb(239, 75, 15);
+    background: none;
+    z-index: 1;
+    transition: color 0.5s ease;
+     }
+
+ #about #join:hover{
+    color: #fff;
+ }     
+
+ #about #join::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(239, 75, 15);
+    color: #fff;
+    z-index: -1;
+    transform-origin: 0 0;
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+ }
+ #about #join:hover::before{
+    transform: scaleX(1);
+ }  
+
+ #about img{
+    max-width: 500px;
+    border-radius: 50%;
+ }
+
+ #about img:hover{
+    opacity: 0.8;
+ }
+
+ /* upcoming */
+
+ #upcoming .container{
+  padding: 3rem;
+}
+
+#upcoming .upComing{
+    /* display: flex;
+    gap: 2rem; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+#upcoming .upComing h3,
+#upcoming .upComing p {
+    margin-top: 1rem;
+}
+
+#upcoming .upComing .text{
+    flex: 1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 1rem;
+ }
+
+#upcoming .upComing .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+#upcoming .btn{
+    cursor: pointer;
+    background-color: rgb(239, 75, 15);
+    color: #fff;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border: solid 2px rgb(239, 75, 15);
+    transition: all 0.5s;
+}
+
+#upcoming .btn:hover{
+    background-color: #fff;
+    color: rgb(239, 75, 15);
+}
+
+#upcoming .view{
+    position: relative;
+    border: solid 2px rgb(239, 75, 15);
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    color: rgb(239, 75, 15);
+    background: none;
+    z-index: 1;
+    transition: color 0.5s ease;
+     }
+
+ #upcoming .view:hover{
+    color: #fff;
+ }     
+
+ #upcoming .view::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(239, 75, 15);
+    color: #fff;
+    z-index: -1;
+    transform-origin: 0 0;
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+ }
+ #upcoming .view:hover::before{
+    transform: scaleX(1);
+ }  
+
+#upcoming .upComing .text .box{
+    position: relative;
+}
+#upcoming .upComing .text .box img{
+    display: block;
+}
+
+#upcoming .upComing .text .box .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: 0.5s;
+}
+
+#upcoming .upComing .text .box:hover .overlay{
+    width: 100%;
+}
+
+#upcoming .upComing .text .box .dataName{
+    font-size: 1.2rem;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+
+/* arrow */
+
+.arrow{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(9, 147, 156);
+    color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transform: scale(0);
+    transition: all 0.2s ease;
+}
+.arrow a{
+    color: #fff;
+}
+.arrow:hover{
+    bottom: 15px;
+}
+.arrow.show{
+    transform: scale(1);
+}
+/* footer */
+
+footer{
+    background-color: #263B5C;
+    color: #fff;
+}
+footer .container{
+    padding: 3rem;
+}
+
+footer .footerMain{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: solid 1px gray;
+    padding-bottom: 3rem;
+    gap: 2rem;
+    text-align: center;
+}
+
+footer .footerMain div{
+   padding: 1rem;
+}
+footer .icons{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+footer a{
+    color: #fff;
+}
+footer .footerMain .logo{
+    margin-bottom: 1rem;
+}
+.fab{
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.fa-facebook{
+    background-color: #6891dc;
+}
+
+.fa-linkedin{
+    background-color: steelblue;
+}
+.fa-instagram{
+    background-color: slateblue;
+}
+.fa-youtube{
+    background-color: red;
+}
+
+
+ .footerMain h4{
+    font-size: 1.3rem;
+    margin: 2rem 0rem 2rem 0;
+}
+
+.footerMain li{
+    margin-top: 0.5rem;
+}
+
+footer .footerMain button{
+    background-color: rgb(239, 75, 15);
+    color: #fff;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border: 1px solid rgb(239, 75, 15);
+}
+
+footer .footerMain button:hover{
+    background-color: transparent;
+    border: solid 1px #fff;
+}
+
+footer .copy{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+/* Contact */
+
+#contact .container{
+    padding: 5rem;
+    margin-top: 5rem;
+}
+
+#contact h2{
+    margin-bottom: 1rem;
+    color: #263B5C;
+}
+#contact .box{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+}
+
+#contact form input, #contact form textarea{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+#contact form textarea{
+    height: 200px;
+}
+
+#contact input[type="submit"]{
+    border: solid 1px var(--btn-color);
+    color: var(--btn-color);
+    background-color: #fff;
+}
+
+#contact input[type="submit"]:hover{
+    background-color: var(--btn-color);
+    color: #fff;
+}
+
+#contact .address .addF{
+    display: flex;  
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+#contact i{
+    color: #aaa;
+    font-size: 1.2rem;
+}
+#contact div p:nth-child(2){
+    color: #aaa;
+}
+
+#contact .addF{
+    margin-top: 2rem;
+}
+
+#contact .addF a{
+    color: #000;
+}
+
+@media screen and (max-width: 992px){
+
+    .hero .hero-content h1{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    #programs .programsMain, #programs .innerBox, #about .aboutUs{
+        flex-direction: column;
+    }
+
+       #upcoming .upComing{
+    grid-template-columns: repeat(2, 1fr);
+   }
+
+}
+
+
+@media screen and (max-width: 768px){
+    .main-menu-items{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    .mobile-menu .bars{
+        display: block;
+    }
+
+    .hero .hero-content h1{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .hero .hero-content p{
+        font-size: 1.2rem;
+    }
+
+  #programs .programsMain, 
+  #programs .innerBox, 
+  #about .aboutUs{
+        flex-direction: column;
+    }
+
+   #upcoming .upComing{
+    grid-template-columns: 1fr;
+   }
+
+    #about img{
+    max-width: 400px;
+ }
+ footer .footerMain{
+     grid-template-columns: 1fr;
+   }
+}
+
+
+@media screen and (max-width: 576px) {
+    .hero .hero-content h1{
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    .hero .hero-content p{
+        display: none;
+    }
+
+    #programs .programsMain, 
+    #programs .innerBox, 
+    #about .aboutUs,
+    #upcoming .upComing .buttons{
+        flex-direction: column;
+    }
+   #upcoming .upComing{
+    grid-template-columns: 1fr;
+   }
+
+
+    #about img{
+        max-width: 300px;
+    }
+
+    footer .footerMain{
+     grid-template-columns: 1fr;
+   }
+
+    footer .icons{
+        flex-direction: column;
+    }
+
+    #contact .box{
+    grid-template-columns: 1fr;
+ 
+}
+
+
+}
